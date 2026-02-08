@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propose Day Surprise 💖</title>
+  <style>
+    /* Background */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffc1cc, #ff9aa2);
+      overflow: hidden;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 5s linear infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(45deg); opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(45deg); opacity: 0; }
+    }
+
+    /* Text animation */
+    .message {
+      position: relative;
+      color: white;
+      font-size: 3em;
+      text-align: center;
+      z-index: 10;
+      opacity: 0;
+      animation: fadeIn 3s forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="message">Happy Propose day Bangaram 💖</div>
+
+  <!-- Hearts -->
+  <div class="heart" style="left: 10%; animation-duration: 4s;"></div>
+  <div class="heart" style="left: 30%; animation-duration: 6s;"></div>
+  <div class="heart" style="left: 50%; animation-duration: 5s;"></div>
+  <div class="heart" style="left: 70%; animation-duration: 7s;"></div>
+  <div class="heart" style="left: 90%; animation-duration: 4.5s;"></div>
+
+</body>
+</html>
